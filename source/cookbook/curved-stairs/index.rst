@@ -1,63 +1,63 @@
-Curved Stairs
-=============
+Изогнутая лестница
+==================
 
 .. image:: capture_001.jpg
 
-Layout
-------
+Схема
+-----
 
 .. image:: capture_002.png
 
 
-Method
-------
+Метод
+-----
 
-Draw the outline of the stairs in vertex edit mode:
+Рисуем контур будущей лестницы в режиме вершин:
 
 .. image:: capture_003.png
 
-Use the :kbd:`LMB` to insert vertices along the edges, to define where the steps will be:
+:kbd:`LMB` делим вершинами длинные стороны на отрезки, чтобы определить, где будут ступени:
 
 .. image:: capture_004.png
 
-Press :kbd:`f` to toggle free mode (no grid snapping) and drag the step vertices *roughly* into the arc shape.
+Жмём :kbd:`f` для отвязки вершин от сетки координат, и начинаем двигать вершины так, чтобы получилось что-то наподобие арки.
 
 .. image:: capture_005.png
 
-Deselect all vertices (:kbd:`\``) and only select those on one side of the stairs:
+Снимаем выделение со всех вершин (:kbd:`\``) и выделяем только верхний ряд:
 
 .. image:: capture_006.png
 
-Press :kbd:`shift-c` (shape arc to 120 degrees):
+Жмём :kbd:`shift-c` (сформировать арку в 120 градусов):
 
 .. image:: capture_007.png
 
-Now deselect all vertices, select only the other side and apply the shape arc operation again. Next use the :kbd:`RMB` to join the step vertices:
+Повторяем предыдущий шаг с нижним рядом вершин и соединяем :kbd:`РКМ` оба ряда линиями:
 
 .. image:: capture_009.png
 
-Switch to sector edit mode, hold :kbd:`shift` and drag-select the stair sectors:
+Переходим в режим секторов и, удерживая :kbd:`shift`, выделяем :kbd:`ЛКМ` сектора ступеней:
 
 .. image:: capture_010.png
 
-Press the raise floor shortcut (:kbd:`.`) twice. Using the :kbd:`LMB`, deselect the left-most step, and deselect the right-most step:
+Поднимаем ступени клавишей :kbd:`.`. :kbd:`ЛКМ` снимаем выделение с крайних секторов:
 
 .. image:: capture_011.png
 
-* Repeat raising the floor and deselecting a step from either side, until you reach the center step. Your stairs are now done:
+* Повторяем предыдущий пункт до тех пор, пока не дойдёшь до центра лестницы:
 
 .. image:: capture_012.png
 
 
-Notes
------
+На заметку
+----------
 
-The shape arc operation is also available by pressing :kbd:`f1` to bring up the operations menu. However this menu does not have the 120 degree arc, so we used the :kbd:`shift-c` keyboard shortcut.
+Операции по формированию арки есть и в меню на клавише :kbd:`f1`. Тем не менее, в нём нет пункта для арки в 120 градусов, так что придётся использовать сочетание клавиш :kbd:`shift-c`.
 
 .. image:: capture_008.png
 
 
-Downloads
----------
+Загрузки
+--------
 
 :download:`curved-stairs.wad`

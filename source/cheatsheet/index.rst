@@ -1,7 +1,7 @@
-Cheatsheet
+Шпаргалка
 ==========
 
-The cheatsheet is a printable page of keyboard and mouse shortcuts for using Eureka.
+Данная шпаргалка - список горячих сочетаний клавиш и кнопок мыши, которые используются в Eureka.
 
-* :download:`cheatsheet.pdf`
-* :download:`cheatsheet.ods`
+* :download:`cheatsheet-ru.pdf`
+* :download:`cheatsheet-ru.ods`

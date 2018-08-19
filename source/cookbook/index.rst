@@ -1,5 +1,5 @@
-Cookbook
-========
+Примеры
+=======
 
 .. toctree::
     :maxdepth: 1

@@ -1,116 +1,121 @@
-Doors
+Двери
 =====
 
 .. image:: doors-01.png
 
-Manual, remote and locked doors.
+Двери, открываемые вручную, удалённо и кнопкой.
 
-.. note::
+.. На заметку::
 
-    Door textures come in two sizes: 64 and 128. When making your doorway, opt for a passage width to match.
+    Текстуры дверей встречаются в 2-х размерах: 64 и 128 едениц. Делая дверной проём, постарайтесь это учитывать.
 
-Building a door
----------------
+Строим дверь
+------------
 
-Use this method to make a basic door. It can be used as a base for a manual or a remote door.
+Данный метод применим для создания основы дверей. На её основе можно создать дверь с кнопкой и др. двери.
 
-* Join two sectors together with a passage
+* Переходим в режим вершин (:kbd:`v`)
+* Соединяем два сектора проёмом
 
 .. image:: doors-02.png
 
-* Increase the grid detail as needed by pressing :kbd:`3-5`
-* Enter vertices edit mode (:kbd:`v`)
-* Add vertices for the door inside the passage
+* Меняем размер ячеек сетки координат клавишами :kbd:`3-5`
+* Рисуем :kbd:`ПКМ` 2 линии, параллельные проёму
 
 .. image:: doors-03.png
 
-* Enter linedef edit mode (:kbd:`l`) and select the front/rear sides of the door
+* Переходим в режим линий (:kbd:`l`) и выделяем переднюю и заднюю стороны двери
 
 .. image:: doors-05.png
 
-* The door raises into the ceiling, set the front upper sidedef texture to the `ICKDOOR1` texture.
+* Т.к. двери выходят из потолка, выбираем передней верхней стороне текстуру `ICKDOOR1`.
 
 .. image:: doors-06.png
 
-* Enter sector edit mode (:kbd:`s`) and select the door sector
+* Переходим в режим секторов(:kbd:`s`) и выделяем сектор нашей двери
 
 .. image:: doors-04.png
 
-* Lower the ceiling all the way to the floor so that the door is closed. Use the **Ceiling** `+-` buttons or the :kbd:`[]` keys.
+* И опускаем потолок сектора до пола, используя кнопки `+-` возле иконки  **Ceiling** или клавиши :kbd:`[]`.
 
 .. image:: doors-07.png
 
-Manual Doors
-------------
+На заметку
+----------
 
-Manual doors open when the player performs the USE action on the door.
+В случае, если одна из сторон двери оказалась лицевой стороной вовнутрь двери, в режиме линий жмём :kbd:`F1` и выбираем в меню пункт 'Flip'
 
-* Enter linedef edit mode (:kbd:`l`)
-* Select both linedefs of the door
+Обычные двери
+-------------
+
+Обычные двери - двери, которые открываются тогда, когда с ней  напрямую взаимодействует игрок.
+
+* Переходим в режим линий (:kbd:`l`)
+* Выделяем обе стороны линий
 
 .. image:: doors-08.png
 
-* Choose the **Type** of the linedefs as `1 DR Open Door`
+* В графе **Type** выбираем тип линии `1 DR Open Door`
 
-To make the door open on a fixed track (the sides stay still while opening and closing):
+Чтобы дверные треки (часть дверной коробки, по которой движется дверь) не двигались вслед за дверью, нужно:
 
-* Select the track linedefs
-* Check the **upper unpeg** and **lower unpeg** options
+* Выделить линии треков
+* Поставить галочки в окошки **upper unpeg** и **lower unpeg**
 
 .. image:: doors-09.png
 
-.. note::
+.. На заметку::
 
-    The door line specials indicates that the sector facing the back of the linedef is a door, this special does not need a tag either.
+    Спэшлы обычных дверей привязываются к сектору автоматически, так что тэги ставить не обязательно.
 
-    The DR special can be opened repeatedly, while D1 can only be opened once.
+    Спэшлы с индексом DR можно открывать много раз, тогда как D1-двери можно открыть только один раз.
 
-Locked Doors
-------------
+Запертые двери
+--------------
 
-Doors that require a blue, yellow or red key to open are created similarly to manual doors. When choosing the door linedef type, pick one of the specials that target the keys:
+Дверь данного типа открывается ключом соответствующего цвета - Синим, Жёлтым или Красным, и создаётся также, как и обычная. При выборе типа линии обращаем внимание на цвет:
 
 .. image:: locked-01.png
 
 
-Remote Doors
-------------
+Двери с кнопкой
+---------------
 
-Remote doors are opened through a switch.
+Такие двери открывается при помощи кнопок, переключателей и пр.
 
-* Enter vertice edit mode (:kbd:`v`)
-* Use the :kbd:`LMB` to insert vertices along the wall, make the linedef 64 units long
+* Переходим в режим вершин (:kbd:`v`)
+* :kbd:`ЛКМ` ставим пару вершин рядом с дверью вдоль стены, должна получиться линия длиной в 64 еденицы
 
 .. image:: remote-01.png
 
-* Enter linedef edit mode (:kbd:`l`), select the new linedef
-* Choose the `SW1GRAY` switch texture
+* Переходим в режим линий (:kbd:`l`) и выделяем получившуюся линию
+* Выбираем для ней текстуру `SW1GRAY`
 
 .. image:: remote-02.png
 
-* Choose the linedef **Type** as `63 SR Door Open`
-* Move the mouse cursor over the grid to ensure focus is not stolen by the **Line Specials** panel
-* Press :kbd:`;` then :kbd:`f` to apply a fresh tag to the linedef
+* Задаём тип линии **Type** `63 SR Door Open`
+* Переводим курсор мыши на сетку, чтобы перенести фокус с панели настроек линий
+* Жмём сначала :kbd:`;`, а затем :kbd:`f` чтобы задать линии новый тэг
 
 .. image:: remote-05.png
 
-* Enter sector edit mode (:kbd:`s`), select the door sector
+* Переходим в режим секторов (:kbd:`s`) и выделяем сектор двери
 
 .. image:: remote-03.png
 
-* Press :kbd:`;` then :kbd:`l` to apply the last tag to the door sector
+* Жмём сначала :kbd:`;`, а затем :kbd:`l`, чтобы присвоить сектору двери последний использованный тэг
 
 .. image:: remote-06.png
 
-* Eureka highlights both the sector and the linedef that share the same tag. This shows us the two are linked:
+* Eureka подсветит линию и сектор, связанные одним тэгом:
 
 .. image:: remote-04.png
 
-.. note::
+.. На заметку::
 
-    The SR line special indicates a switch that can be toggled repeatedly, while S1 is a switch that can only be toggled once.
+    Спэшлы линий SR создают кнопку, которая сработает несколько раз, а S1 срабатывает только 1 раз.
 
-Downloads
+Загрузки
 ---------
 
 :download:`doors.wad`

@@ -1,23 +1,25 @@
-Introduction
-============
+Введение
+========
 
-Eureka is a map editor for the classic DOOM games, and a few related games such as Heretic and Hexen. It supports Linux, Windows and OS X.
+Eureka - редактор карт классического DOOM и основанных на его движке игр - Heretic и Hexen. Поддерживает работу в Linux, Windows и OS X.
 
-The project lives at http://eureka-editor.sourceforge.net
+Проект находится по адресу http://eureka-editor.sourceforge.net
 
-Eureka was created by Andrew Apted. This manual was compiled by Wesley Werner.
+Автор Eureka - Andrew Apted. Автор мануала и сборщик - Wesley Werner. Автор версии на русском языке - Arbars Zagadkin.
 
 
-Manual
+Мануал
 ^^^^^^
 
-If you find a mistake in this manual `please report it here <https://github.com/wesleywerner/eureka-docs/issues>`_.
+Если вы заметили ошибку, прошу `сообщить о ней здесь <https://github.com/wesleywerner/eureka-docs/issues>`_.
 
-If you want to contribute, `fork the repo <https://github.com/wesleywerner/eureka-docs>`_ and send a pull request.
+По поводу ошибок в переводе, сообщайте `о них сюда <https://github.com/Arbars/eureka-docs/issues>`_.
 
-There is also a `downloadable PDF version of this manual <http://readthedocs.org/projects/eureka/downloads/>`_.
+Хочешь помочь с улучшением проекта? `Сделай форк репозитория автора оригинала <https://github.com/wesleywerner/eureka-docs>`_, или `перевода <https://github.com/Arbars/eureka-docs>`_ и отправь pull request.
 
-License
-^^^^^^^
+Также есть `PDF-версия данного мануала <http://readthedocs.org/projects/eureka/downloads/>`_.
 
-This manual is licensed under a `Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0/>`_.
+Лицензия
+^^^^^^^^
+
+Данный мануал распространяется под лицензии `Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0/>`_.

@@ -1,95 +1,95 @@
-User Interface
-==============
+Интерфейс пользователя
+======================
 
-Eureka features a 2D orthogonal view and a 3D view. Switch between the two views with the :kbd:`tab` key.
+Eureka обладает двумя основными режимами работы с картой 2D и 3D. Переключаться между режимами можно клавишей :kbd:`tab`.
 
 .. image:: 2d-view.png
 
-*The 2D view is used to construct walls and place things on the map*
+*2D вид используется, собственно, для маппинга - построения уровней и расстановки предметов на них*
 
 .. image:: 3d-view.png
 
-*The 3D view is used to preview textures and make ceiling, floor and light adjustments*
+*3D вид используется для предпросмотра уровня при калибровке освещения, выборе текстур пола и потолка*
 
-Panning and Zooming
+Движение и масштабирование
 -------------------
 
-To move around the 2D view:
+Для перемещения в 2D виде используются:
 
-* Roll the mouse wheel to zoom
-* Click and drag with the middle mouse button (mouse wheel) to pan
-* Press :kbd:`home` to zoom the whole map into view
+* Колёсико мыши - масштабирование
+* Средняя кнопка мыши (под колёсиком) - захват и перемещение рабочей поверхности
+* Клавиша :kbd:`home` - отмасштабировать рабочую область так, чтобы была вся карта целиком
 
-The Camera
+Камера
 ----------
 
-This arrow in 2D view indicates the current position of the 3D camera.
+Стрелочка в 2D виде показывает текущее положение 3D камеры.
 
-* Press :kbd:`'` (single quote) in the 2D view to position the 3D camera at the location of the mouse cursor.
-* Press :kbd:`end` in 2D view to center the map on the camera position.
+* Клавиша :kbd:`'` (одиночная кавычка) в 2D виде переносит 3D камеру в точку, на которой находится курсор.
+* Клавиша :kbd:`end` в 2D виде определяет центром карты координаты 3D камеры.
 
 .. image:: camera.png
 
-When in the 3D view you can control camera movement with the following controls:
+В 3D управлять перемещением камеры можно следующими способами:
 
-* Roll the mouse wheel to move forward/backward
-* Click and drag left/right with the middle mouse button to rotate the view
-* Click and drag up/down with the middle mouse button to raise/lower the view
+* Колёсико мыши - вперёд / назад
+* Удерживать СКМ и двигать вправо / влево - поворот камеры
+* Удерживать СКМ и двигать вперёд / назад - поднимать / опускать камеру
 
-The Grid
---------
+Сетка координат
+---------------
 
-Toggle the grid in 2D view with the **Grid** dropdown box (located on the bottom status bar), or by pressing :kbd:`g`. You can quickly change the grid size with the :kbd:`0-9` keys.
+Включать сетку координат можно в выпадающем меню **Grid** на нижнней панели, или клавишей :kbd:`g`. Быстро переключаться между размерами ячеек можно клавишами :kbd:`0-9`.
 
-Toggle free mode / grid snapping with the :kbd:`f` key.
+Переключаться между режимами с привязкой к сетке и без можно клавишей :kbd:`f` key.
 
 .. image:: 2d-grid.png
 
-.. note::
+.. На заметку::
 
-    If you encounter lag while panning a large zoomed-out map, disable grid rendering with :kbd:`g` while panning.
+    Если во время перетаскивания крупной карты редактор начнёт лагать, отключи на время перетаскивание сетку клавишей :kbd:`g`.
 
-Rendering Mode
+Режимы отрисовки
 --------------
 
-The `View / Sector Rendering` menu toggles how the 2D view draws sectors.
+В меню `View / Sector Rendering` можно выбрать режим отрисовки секторов.
 
 .. image:: sector-rendering-menu.png
 
-Floors
-^^^^^^
+Полы
+^^^^
 
-This mode draws the floor textures of sectors.
+Сектора будут отрисовываться с текстурой пола.
 
 .. image:: sector-rendering-floors.png
 
-Ceilings
-^^^^^^^^
+Потолки
+^^^^^^^
 
-This mode draws the ceiling textures of sectors.
+Сектора будут отрисовываться с текстурой потолка.
 
 .. image:: sector-rendering-ceilings.png
 
-Lighting
-^^^^^^^^
+Освещённость
+^^^^^^^^^^^^
 
-The light render mode draws shades of sector light levels.
+Данный режим показывает уровень освещённость секторов.
 
 .. image:: sector-rendering-lighting.png
 
-Sound
-^^^^^
+Звук
+^^^^
 
-The sound render mode highlights sectors where sound will reach. Hover the mouse cursor over the sector in question to highlight where sounds originating will propagate.
+Этот режим показывает, как распространяется звук. Наводим курсор на нужный сектор, чтобы увидеть, как будет распространяться звук.
 
 .. image:: sector-rendering-sound.png
 
 
-Find and Replace
+Поиск и замена
 ----------------
 
-Open the find panel with the `View / Find` menu or press :kbd:`control-f`.
+Панель поиска и замены открывается через пункт меню `View / Find` или сочетанием клавиш :kbd:`control-f`.
 
-You can search for Things, line textures, sector flats, lines by type (specials) or sectors by type.
+Можно искать предметы, текстуры линий, плоскости полов, линии по типу (спэшлу) или секторы по типу.
 
 .. image:: find-panel.png

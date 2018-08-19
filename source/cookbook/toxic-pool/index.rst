@@ -1,41 +1,46 @@
-Toxic Pool
-==========
+Бассейн с отходами
+==================
 
 .. image:: toxic-01.png
 
-Toxic waste causes damage when walked on.
+Токсичные отходы наносят урон игроку.
 
-Method
-------
+Метод
+-----
 
-* Press :kbd:`v` for vertices edit mode
-* Click the :kbd:`RMB` to draw a path
+* Жмём :kbd:`v` и переходим в режим вершин
+* ПКМ :kbd:`RMB` рисуем русло
 
 .. image:: toxic-02.png
 
-* Press :kbd:`s` for sector edit mode
-* Press :kbd:`\`` to deselect everything
-* Select all the sectors that will become the toxic pools
-* Click the Floor texture button and pick the `NUKAGE1` texture
+* Жмём :kbd:`s` и переходим в режим секторов
+* Жмём :kbd:`\`` и снимаем выделение
+* Выделяем сектор нашей лужи с кислотой
+* Кликаем по кнопке тексуры пола и задаём текстуру `NUKAGE1`
 
 .. image:: toxic-03.png
 
-* Choose the sector type using the **Choose** button
+* Указываем тип сектора, кликнув по кнопке **Choose**
 
 .. image:: toxic-05.png
 
-* Pick the **Damage 5%** type
+* Выбираем из списка тип **Damage 5%**
 
 .. image:: toxic-06.png
 
-* Press :kbd:`\`` to deselect everything
-* Select the sector that will become the walkable path
-* Raise the Floor height by clicking the floor `+` button
-* Alternatively press the :kbd:`,.` keys to adjust floor height via keyboard
+* Жмём :kbd:`\``  и снимаем выделение
+* Выделяем сектора, которые будут берегами
+* ПОоднимаем пол берегов, кликая по кнопке `+`
+* Как вариант, можно поднять пол, нажимая клавишу :kbd:`.`
 
 .. image:: toxic-04.png
 
-Downloads
----------
+На заметку
+----------
+
+Как вариант, можно просто опустить русло клавишей :kbd:`,`
+
+Загрузки
+--------
 
 :download:`toxicpool.wad`

@@ -1,40 +1,40 @@
-Teleporters
-===========
+Телепорты
+=========
 
 .. image:: teleport-01.png
 
-A teleport is triggered by walking over a linedef with the teleport special. The tag of the linedef points to the sector where the teleport lands.
+Телепорт срабатывает при пересечении игроком линии с соответсвующим спэшлом. Тэг линии привязывается к тому сектору, на который телепортируется игрок.
 
-Teleport Platform
------------------
+Платформа телепорта
+-------------------
 
-* Create a 64x64 sector for the teleport platform
-* Set the floor texture as `GATE1`, the ceiling as `TLITE6_5`
+* Рисуем сектор со стороной 64х64 еденицы
+* Текстурой пола указываем `GATE1`, текстурой потолка - `TLITE6_5`
 
 .. image:: teleport-02.png
 
-* Enter linedef edit mode (:kbd:`l`)
-* Press :kbd:`;` then :kbd:`f` to apply a fresh tag to all four linedefs. This will point to the teleport landing sector.
+* Переходим в режим линий (:kbd:`l`)
+* ЖМём сначала :kbd:`;`, а затем :kbd:`f`, чтобы присвоить новый тэг всем четырём линиям. Отсюда игрок будет телепортироваться.
 
 .. image:: teleport-03.png
 
-* Choose the linedef **Type** as `97 WR Teleport`
+* Задаём в поле **Type** тип линии `97 WR Teleport`
 
 .. note::
 
-    A teleport is only triggered when walking from the **Front** to the **Back** of a linedef. This is intentional as it allows the player to walk off the landing platform without triggering another unintended teleport.
+    Телепорт срабатывает только тогда, когда линия направлена **Лицевой** стороной к игроку, а **Задней** - внутрь сектора. Это было сделано специально, чтобы игрок, переходя линию, не активировал ненароком другой телепорт.
 
-Landing Site
-------------
+Место прибытия
+--------------
 
-* Tag the landing sector the same as the teleporter linedefs. Press :kbd:`;` then :kbd:`l` to apply the last used tag to the landing sector.
-* Enter Thing edit mode (:kbd:`t`), position the mouse cursor inside the landing sector and press :kbd:`ins`. Choose the **Type** as `14 Teleport Exit` (labelled as TFOG in the thing browser)
+* Назначаем тэг линий телепорта тому сектору, в который будем телепортироваться, нажимая сначала клавишу :kbd:`;`, а затем :kbd:`l`.
+* Переходим в режим предметов (:kbd:`t`), располагаем курсор мыши на секторе и жмём :kbd:`ins` или :kbd:`пробел`. Указываем тип предмета **Type** `14 Teleport Exit` (в браузере предметов отмечен как TFOG)
 
 .. image:: teleport-04.png
 
-* Click the directional arrows to set the angle of the `TFOG` thing. This is the angle faced after teleporting.
+* Указываем стрелками угол предмета `TFOG`. Углом мы указываем, в какую сторону будет смотреть игрок после телепортации.
 
-Downloads
----------
+Загрузки
+--------
 
 :download:`teleporters.wad`

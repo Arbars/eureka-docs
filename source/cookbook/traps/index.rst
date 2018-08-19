@@ -1,137 +1,136 @@
-Traps
-=====
+Ловушки
+=======
 
-Examples
---------
+Примеры
+-------
 
-All trap examples can be played in :download:`traps.wad`
+Все примеры доступны для тестирования в файле :download:`traps.wad`
 
-Monster Closet
---------------
+Нежданчик 1-й (скрытая комната с монстрами)
+-------------------------------------------
 
-Monsters are staged in a hidden room with a door disguised as a wall or other nondescript panel, which opens to surprise the player.
+Монстры находятся в скрытой комнате, отделённой дверью или панелью, которая открывается внезапно для игрока.
 
 .. image:: monster_closet.png
     :target: /_images/monster_closet.png
 
-* Create a hidden closet sector (A), add some monsters inside it.
-* Create a closet door sector (B).
-* Close the closet door so that it looks like a normal wall (C).
-* Apply a fresh tag to the closet door sector (B).
-* Add the trigger lines that will open the closet, and apply the same tag on them (D).
-* Assign the linedef special **Type 109 W1 Open and stay fast** to the trigger lines (D).
+* Рисуем скрытый сектор (А), добавляем туда монстров.
+* Создаём дверь скрытого сектора (B).
+* Закрываем дверь и придаём ей вид обычной стены (C).
+* Задаём новый тэг сектору двери (B).
+* Рисуем линию-триггер, которая будет открывать дверь комнаты с монстрами, и задаём ей тэг двери (D).
+* Задаём линии-триггеру тип **109 W1 Open and stay fast**  (D).
 
-Monster Platform
-----------------
+Нежданчик 2-й (платформа с монстрами)
+-------------------------------------
 
-Monsters are staged on top a platform that lowers from the ceiling to surprise the player.
+Мностры спускаются на платформах, скрытых потолком. Особенно неприятно, когда ты идёшь за ключом в дальнем углу.
 
 .. image:: monster_platform.png
     :target: /_images/monster_platform.png
 
-* Add the platform sectors with some monsters in them (A).
-* Raise the platform floors and ceilings (B) until flush with the surrouning ceiling.
-* Select the platform sectors and apply a fresh tag (A).
-* Insert vertices along a wall to make a 64 unit long line, for the switch (C).
-* Set a switch texture (C).
-* Apply the platform tags to the switch linedef (C).
-* Set the switch linedef (C) type to **23 S1 Floor down LEF**.
+* Рисуем платформы и добавляем на них монстров (A).
+* Поднимаем полы и потолки платформ (B), пока их пол не сравняется с потолком основной комнаты.
+* выбираем сектора платформ (A) и назначаем им новые тэги.
+* Вставляем пару вершин в стену, чтобы получился отрезок в 64 еденицы для кнопки (C).
+* Добавляем на отрезок текстуру кнопки или переключателя(C).
+* Задаём тэг платформ линии с кнопкой (C).
+* Задаём линии с кнопкой (C) тип **23 S1 Floor down LEF**.
 
-Crushers
---------
+Пресс ("давилка")
+-----------------
 
-The ceiling lowers to crush the player.
+Потолок опускается, раздавливая игрока.
 
 .. image:: crusher.png
     :target: /_images/crusher.png
 
-* Assign a fresh tag to the sector that will do the crushing (A).
-* Create a linedef that will act as the walk-over trigger (B).
-* Assign the same tag to the trigger linedef (B).
-* Set the trigger linedef (B) **Type 6 W1 Crusher /fast**
+* Задаём сектору-прессу новый тэг (A).
+* Рисуем линию-триггер и назначаем ей тэг сектора-пресса (B)..
+* Задаём линии-триггеру (B) тип **6 W1 Crusher /fast**
 
-.. note::
+.. На заметку::
 
-    You will need to **lower unpeg** the room sector walls (C) if you do not want the walls to move up and down with the crushing ceiling.
+    Если не хочется, чтобы стены сектора-пресса двигались вслед за потолком, ставим галочку в **lower unpeg**, выделив линии сектора (C).
 
-.. warning::
+.. Внимание::
 
-    Fast crushers do less damage and the player may even survive one round of crushing. Slow crushers take their time, dealing a lot of damage and ensures player death.
+    Быстрый пресс забирает здоровье понемногу, давая шанс на побег после удара. Медленный пресс даёт шанс на побег в начале, но если прозевал - умрёшь жуткой смертью.
 
-Drop Trap
----------
+Провал в подпол 
+---------------
 
-The floor drops out unexpectly from beneath the player into a room with monsters.
+Пол внезапно проваливается, и игрок попадает в комнату с монстрами.
 
 .. image:: drop_trap.png
     :target: /_images/drop_trap.png
 
-* Add the sector that will drop out beneath the player (A).
-* Tag the sector (A).
-* Add the hidden room the player will drop into, lower it's floor (B).
-* Insert vertices on a wall to create a switch (C).
-* Set the tag of the switch linedef (C) to match the drop sector (A).
-* Set the switch linedef **Type 123 SR Lift Lower /fast** (C).
+* Рисуем сектор, который будет проваливаться перед игроком (A).
+* Задаём ему тэг (A).
+* Добавляем скрытую комнату, куда игрок будет проваливаться, и опускаем её (B).
+* Вставляем 2 вершины и создаём переключатель (C).
+* Задаём переключателю тэг (C) проваливающегося сектора (A).
+* Задаём линии переключателя тип **123 SR Lift Lower /fast** (C).
 
 
-Lock-In Trap
-------------
+Ловушка-мышеловка
+-----------------
 
-Lock all the exits in a room, forcing the player into close combat for a short time.
+Запирая все пути к отступлению, уровень заставляет игрока расправляться с монтрами по-быстрому.
 
 .. image:: lock-in_trap.png
     :target: /_images/lock-in_trap.png
 
-* Create the open door sector (A) and assign a fresh tag to it.
-* Add the linedef that will trigger the door to close (B).
-* Set the linedef **Type 16 W1 Close for 30s**
+* Создаём дверь (A) и задаём ей новый тэг.
+* Рисуем линию, которая запустит процесс закрытия двери (B), и задаём ей тэг двери.
+* Задаём линии-триггеру тип **16 W1 Close for 30s**
 
-.. note::
-    If you want to close multiple doors in the room, give them all the same tag.
+.. На заметку::
+    Если будет нужно закрыть несколько дверей, задаём им один тэг на всех.
 
-Teleport Ambush
+Нежданчик 3-й, из телепорта
 ---------------
 
-Monsters stationed in a hidden room wake up to the sound of gunfire, walk over a teleport trigger and summon themselves to the designated location.
+Монстры в секретной комнате, услышав шум стрельбы, начинают беситься и телепортируются на уровень.
 
 .. image:: teleport_ambush.png
     :target: /_images/teleport_ambush.png
 
-* Apply a fresh tag to the sector where the monsters will teleport into (A).
-* Insert the **Teleport exit** thing (type 14, under the "Player" category called `TFOG`) in the sector (A).
-* Create a hidden room where the monsters are stationed (D).
-* Connect the main sector (A) with the hidden room (D) via a sound pipe (B). This allows the sound of gunfire to reach the hidden room, alerting the monsters.
-* Insert a teleport trigger linedef in the hidden room (C), assign the same tag as the exit sector (A), and set the **Type 97 WR Teleport**.
+* Назначаем новый тэг сектору, из которого монстры будут телепортироваться в сектор (A).
+* Ставим предмет **Teleport exit** (тип 14, под категорией "Player", сокращенно `TFOG`) в сектор (A).
+* Рисуем скрытую комнату, где будут стоять монстры (D).
+* Соединяем основную комнату (A) со скрытой (D) отдушиной (B). Это поможет звуку проникнуть в скрытую комнату и поднять шум среди монстров.
+* Рисуем триггер-линию телепорта в скрытой комнате (C), назначаем ей тот же тэг, что и у основной комнаты (A), и задаём тип **97 WR Teleport**.
 
-.. note::
+.. На заметку::
 
-    Use the **Sound Sector Rendering** mode (under the View menu), and enter **sector edit mode** in the 2D view to see how sound travels in your map.
+    Используй режим **Sound Sector Rendering** (в меню View), и перейди в **режим работы с секторами**, чтобы в 2D виде посмотреть, как распространяется звук.
 
-Combat Teleporting
-------------------
+Боевая телепортация
+-------------------
 
-Monsters teleport around the player during combat, making engagements less predictable. This trap is used in Doom II map 10 to great effect with a Cyberdemon.
+Монстры телепортируются из одного угла карты в другой, заставляя игрока конкретно понервничать. Эта ловушка хорошо показана в Doom II, map 10, где нужно уворачиваться от Кибердемона.
 
 .. image:: combat_teleporting.png
     :target: /_images/combat_teleporting.png
 
-* Create teleport trigger linedefs of **Type 126 WR Teleport /mon** (A).
-* Apply a fresh tag to the trigger line (A).
-* Apply the same tag to a destination sector (B)
-* Place a **Teleport exit** in the destination sector (B).
-* Repeat as needed, more teleport triggers with different destinations will make for varied encounters.
+* Создаём линии-триггеры с типом **Type 126 WR Teleport /mon** (A).
+* Задаём новый тэг линии-триггеру (A).
+* Присваиваем тот же тэг сектору (B)
+* Ставим предмет **Teleport exit** в секторе (B).
+* При необходимости повторяем данные шаги для создания большего количества телепортов и усложнения атак.
 
-Nukage Surprise
----------------
+Токсичный сюрприз
+-----------------
 
-A floor turns into radioactive waste, dealing damage to the player when walked on.
+Токсичные отходы заливают пол, нанося игроку урон во время движения.
 
 .. image:: nukage_surprise.png
     :target: /_images/nukage_surprise.png
 
-* Add a trigger line of **Type 37 W1 Floor down LEF /NXP** (A).
-* Apply a fresh tag to the trigger line (A).
-* Tag the target sector (B) the same as the trigger tag.
-* The target sector (B) must be surrounded by damage sectors (C).
-* The damage sectors (C) are lower than the target sector (B).
-* The damage sectors (C) have **Type 7 Damage 5%** and the **NUKAGE1** texture. On trigger the target sector (B) will lower to the damage sectors (C) and the damage and texture is transferred.
+* Рисуем линию-триггер и задаём тип **37 W1 Floor down LEF /NXP** (A).
+* Также задаём линии-триггеру новый тэг (A).
+* Задаём тот же тэг нашему сектору-ловушке (B).
+* Сектор-ловушка(B) должен быть окружен сектором с кислотой (C).
+* Сектор с кислотой (C) должен быть ниже опускающегося сектора (B).
+* Задаём сектору с кислотой (C) тип **7 Damage 5%** и текстуру **NUKAGE1**. При срабатывании сектор (B) опустится до уровня сектора с уроном (C) и переймёт все его параметры (урон и текстуру).

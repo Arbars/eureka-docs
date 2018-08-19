@@ -1,76 +1,76 @@
-Project Management
-==================
+Работа с проектом
+=================
 
-Your WAD can contain multiple maps, and their numbering is determined by the source IWAD you choose to use.
+Твой WAD может содержать несколько карт, которые нумеруются согласно того порядка, который заложен в выбранном тобой IWAD.
 
-For Doom1, or Freedoom1, you get 4 episodes of 9 maps each: E1M1-9, E2M1-9, E3M1-9 and E4M1-9.
+Для Doom1 или Freedoom1 у тебя будет 4 эпизода по 9 карт в каждом: E1M1-9, E2M1-9, E3M1-9 и E4M1-9.
 
-For Doom2, or Freedoom2, you get 32 maps: MAP01 - MAP32.
+Для Doom2, или Freedoom2, у тебя будет 32 карты: MAP01 - MAP32.
 
-This manual will focus on the Freedoom1 IWAD.
+Данные мануал затачивается под Freedoom1 IWAD.
 
-Create a new WAD
-----------------
+Создание нового WAD
+-------------------
 
-Use the **File -> New Project** menu to create a new WAD, choose the location and file name, click OK.
+Через пункт меню :kbd:'File -> New Project' или сочетание клавиш :kbd:'Ctrl+N' вызываем диалогое окно сохранения WAD, вбиваем имя файла, выбираем место, и кликаем "OK".
 
-Next select the settings for you new project:
+Затем, настраиваем новый проект:
 
-* IWAD: pick freedoom1 from the list, use the **Find** button if you need to browse for it
-* Source Port: pick boom (or your nearest source port) from the list, use the **Setup** button to browse for the executable
-* If you are a GNU / Linux user, you can find the location of the executable with the bash command ``which prboom``.
+* IWAD: выбираем freedoom1 из списка, жмём кнопку **Find** и указываем его местоположение.
+* Source Port: выбираем boom (или тот, что нравится) из списка, жмём **Setup** и указываем местоположение екзешника
+* В случае с GNU / Linux, расположение исполняемого файла можно узнать с помощью команды ``which prboom-plus``.
 
-Click **OK** when done.
+Закансиваем настройку и кликаем **OK**.
 
 .. image:: new-project-dialog.png
 
-Open a map
-----------
+Открываем карту
+---------------
 
-Use the :kbd:`File -> Open Map` menu or press :kbd:`control-o`. Make sure you pick **Find map in the PWAD above**, otherwise you will be modifying the maps from the freedoom1 IWAD.
+Открываем окно выбора карты через пункт меню :kbd:`File -> Open Map` или сочетание клавиш :kbd:`control-o`. В выпадающем еню выбираем пункт **Find map in the PWAD above**, в противном случае для выбора будут доступны только карты из freedoom1.
 
 .. image:: open-map.png
 
 
-Add a new map
--------------
+Добавляем карту
+---------------
 
-Use the :kbd:`File -> Fresh Map` menu, you are prompted to pick the slot where the new map will be placed, green slots are empty and red slots already contain maps.
+Открываем окно добавления карты через пункт меню :kbd:`File -> Fresh Map`. Розовым отмечены занятые слоты, зелёным - свободныеЦ.
 
 .. image:: fresh-map-dialog.png
 
-Rename a map
-------------
+Переименовываем карту
+---------------------
 
-Use the :kbd:`File -> Rename Map` menu to change the play order of a map, a dialog prompts you to pick the new slot for the map.
+Через пункт меню :kbd:`File -> Rename Map` можно изменить порядок карт, выбрав в диалоговом окне новый слот.
 
-Slots with existing maps cannot be selected.
+Занятые слоты выбирать нельзя.
 
 .. image:: rename-map-dialog.png
 
-Copy a map
+Копируем карту
 ----------
 
-Use the :kbd:`File -> Copy Map` menu to copy the current map to another slot.
+Пункт меню :kbd:`File -> Copy Map` открывает окно, в котором выбираем слот для скопированной карты.
 
-Delete a map
+Удаляем карту
 ------------
 
-Use the :kbd:`File -> Delete Map` menu to remove the current map from the WAD. You will be prompted to confirm the delete.
+Пункт меню :kbd:`File -> Delete Map` удалит текущую карту из WAD, запросив подтвердение.
 
-Export a map
-------------
+Экспортируем карту
+------------------
 
-Use the :kbd:`File -> Export Map` menu to export the current map to:
+Пункт меню :kbd:`File -> Export Map` поможет экспортировать карту в:
 
-* a new WAD
-* an existing WAD
+* новый WAD
+* уже существующий WAD
 
 .. image:: export-map-file-chooser.png
 
-*Pick the file to export to*
+*Выбор файла, в который будет экспортирована карта*
 
 .. image:: export-map-level-chooser.png
 
-*Select the level of the exported map*
+*Выбор слота, в который будет экспортирована карта*
 

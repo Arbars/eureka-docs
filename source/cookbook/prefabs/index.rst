@@ -1,74 +1,74 @@
-Prefabs
-=======
+Заготовки
+=========
 
-Prefabs are useful to quickly throw maps together by copy-pasting pre-designed structures.
+Заготовки позволяют сэкономить время при создании карты благодаря простому копированию уже готовых структур (дверей и пр).
 
 .. image:: capture_001.png
 
-Things to keep in mind when using prefabs:
+При использовании заготовок нужно помнить о 2 вещах:
 
-1. You can only copy-paste in the same Eureka instance.
-2. You have to merge common vertices and sectors after pasting.
+1. Копирование работает только в пределах одного WAD файла.
+2. После вставки заготовки нужно объединить общие вершины.
 
-Exporting your prefab map to an unused slot in your game wad allows quicker switching.
+Карту с заготовками можно расположить в неиспользуемом слоте.
 
-Downloads
----------
+Загрузки
+--------
 
-Use :download:`prefabs.wad` as a base for adding your own designs.
+Как основу для своего набора заготовок будем использовать файл :download:`prefabs.wad`.
 
 .. image:: capture_002.png
 
-Merging Vertices
-----------------
+Объединение вершин
+------------------
 
-Copying a prefab into void space, like a door prefab, needs vertex merging.
+Копируя заготовку в свободное пространство, к примеру дверь, необходимо объеденить её вершины с основным сектором.
 
-Select the door prefab in sector mode, press :kbd:`control-c`:
+Выбрав заготовку двери в режиме секторов, жмём :kbd:`control-c`:
 
 .. image:: capture_003.png
 
-Open the target map, position the mouse cursor where you want the prefab and paste with :kbd:`control-v`:
+Открыв нужную нам карту, располагаем курсор мыши в нужном месте и втавляем заготовку :kbd:`control-v`:
 
 .. image:: capture_004.png
 
-Enter vertex edit mode, use the :kbd:`RMB` to link the room with the door vertices:
+Перейдя в режим вершин, жмём :kbd:`RMB`, чтобы соеденить вершины двери с комнатой:
 
 .. image:: capture_005.png
 
-If you optionally want to get rid of the extra sector in between, select the one room vertex, then the matching door vertex (this order matters) and merge them:
+Если между дверью и комнатой дополнительный сектор не нужен, выделяем одну из вершин двери, затем одну из вершин комнаты (порядок имеет значение) и объединяем:
 
 .. image:: capture_006.png
 
-Do the same for the other vertices (selecting the room vertex first):
+То же самое делаем и с другими вершинамя (выделяя сначала вершину двери):
 
 .. image:: capture_007.png
 
-This completes your door:
+Всё, эта сторона двери готова:
 
 .. image:: capture_008.png
 
-Merging Sectors
----------------
+Объединение секторов
+--------------------
 
-The process of pasting sectors into sectors requires another kind of merging. The stairs prefab is one such example.
+Порцесс вставки одного сектора в другой требует иного способа объединения. Лестница - лишь один из примеров.
 
-Select the prefab sectors. You might need to use :kbd:`shift LMB` to avoid dragging sectors during selection:
+Выбираем сектора заготовки. Используем комбинацию :kbd:`shift LMB`, чтобы рамкой выделить все нужные сектора:
 
 .. image:: capture_009.png
 
-Copy, open your map, and paste. Ensure your mouse cursor is positioned where you want the prefab pasted:
+Копируем, открываем нашу карту, и втавляем. Убедись в том, что курсор мыши находится в нужном месте:
 
 .. image:: capture_010.png
 
-Switching to 3D view shows us artefacts, the prefab needs merging first:
+Переходим в 3D вид, видим наши артефакты, говорящие о необходимости объединения:
 
 .. image:: capture_011.png
 
-To merge, deselect everything (:kbd:`\``), hover to highlight the room sector and press :kbd:`space`:
+Чтобы объединить сектора, снимаем выделение (:kbd:`\``), наводим курсор на сектор комнаты и жмём :kbd:`space`:
 
 .. image:: capture_012.png
 
-The stairs prefab is now merged with your room sector:
+Всё, теперь сектора лестницы объединены с сектором комнаты:
 
 .. image:: capture_013.png

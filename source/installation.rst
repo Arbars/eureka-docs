@@ -1,40 +1,40 @@
-Installation
-============
+Установка
+=========
 
-Requirements
-------------
+Системные требования
+--------------------
 
-A IWAD file, or "Internal WAD", contains the default maps, textures, sounds and other auxiliary data. You can use the `DOOM.WAD` or `DOOM2.WAD` files if you own those.
+Файл IWAD, или "Internal (внутренний) WAD", содержит в себе карты, текстуры, звуки и прочие данные, которые идут по-умолчанию. Ты можешь использовать `DOOM.WAD` или `DOOM2.WAD`, если они у тебя есть.
 
-Alternatively you can download the `Freedoom <http://freedoom.github.io/>`_ WADS, Freedoom is liberally licensed under the BSD license and provides free levels, artwork, sound effects and music compatible with any classic Doom source port. Download and extract Freedoom to an accessible location of your choice. If you are a GNU / Linux user you may extract the Freedoom WADS into ``~/.eureka/iwads/`` where they are automatically detected for your convenience.
+В качестве альтернативы можно воспользоваться файлами проекта `Freedoom <http://freedoom.github.io/>`_ . Freedoom распространяется под свободной BSD лицензией и имеет в своём составе уровни, графику, звуки и музыку, и совместим с любым клаччическим Source-портом. Достаточно скачать и распаковать архив с файлами в любое удобное для тебя место. В случае с GNU / Linux можно положить файлы в каталог ``~/.eureka/iwads/`` или установить игру из репозиториев, и редактор автоматически их найдёт и подключит.
 
-.. note::
+.. На заметку::
 
-    A PWAD file, or "Patch WAD", provides additional levels and other resources that replace those in the IWAD. When making levels in Eureka we will be working with PWADs - any mention of a WAD file implies the PWAD unless otherwise noted.
+    PWAD-файл, или "Patch WAD" (патч, заплатка), содержит в себе дополнительные уровни и прочие ресурсы, которые будут заменены в IWAD. При создании уровней в Eureka мы будем работать с PWAD'ами - любое упоминание WAD-файла подразумевает PWAD, если не указано иное.
 
-Doom Engine
+Движок Doom
 ^^^^^^^^^^^
 
-You will need a Doom source port to play-test your maps. Here are a couple of options you can browse:
+Для того, чтобы тестировать карты, тебе понадобится движок Doom (source-порт). На выбор есть несколько вариантов:
 
-* `Chocolate Doom <https://www.chocolate-doom.org>`_ - accurately reproduces the experience of Doom as it was played in the 1990s. A safe option for testing your maps.
-* `PrBoom <http://prboom.sourceforge.net/>`_ - an advanced engine with fine-grained control over options controlling compatibility levels. This port is the standard for recording and playing of demos.
-* `Crispy Doom <https://fabiangreffrath.github.io/crispy-doom>`_ - a minimalist engine with few extra features.
-* `GZDoom <https://gzdoom.drdteam.org/>`_ - an advanced and moddable engine with many features, including newer and non-standard features. You should not base your map's compatibility off this port alone.
+* `Chocolate Doom <https://www.chocolate-doom.org>`_ - создан для сохранения опыта игры в оригинальном Doom на современных ОС. Неплохой вариант для тестов.
+* `PrBoom <http://prboom.sourceforge.net/>`_ - продвинутый движок с кучей настроек совместимости. Стандарт для записи и просмотра демок.
+* `Crispy Doom <https://fabiangreffrath.github.io/crispy-doom>`_ - минималистичное решение с парой плюшек.
+* `GZDoom <https://gzdoom.drdteam.org/>`_ - продвинутый и модифицируемый движок с кучей особенностей, включая нестандартные. На первых порах привязывать карты к данному порту не рекомендуется.
 
 Windows
 -------
 
-To get the latest Eureka for Windows, go to the `Eureka project page <https://sourceforge.net/projects/eureka-editor/>`_ and click the big "download" button. Extract the zip somewhere memorable and run `eureka.exe`.
+Для скачивания последней версии редактора переходим на `страницу проекта <https://sourceforge.net/projects/eureka-editor/>`_ и жмём на большую кнопку "download". Распаковываем куда-нибудь архив и кликаем на `eureka.exe`.
 
 GNU / Linux
 -----------
 
-Your package manager might contain Eureka, albeit if outdated you can opt to build from source.
+По идее, Eureka уже есть в репозиотриях большинства популярных дистрибутивов. Но если нужна самая свежая версия, то придётся собирать из исходного кода.
 
-* Locate the latest version on `the download page <https://sourceforge.net/projects/eureka-editor/files/Eureka/>`_
-* Get and extract `eureka-*-source.tar.gz`
-* Install the build dependencies:
+* переходим на `страницу загрузки проекта <https://sourceforge.net/projects/eureka-editor/files/Eureka/>`_
+* скачиваем и распаковываем `eureka-*-source.tar.gz`
+* ставим необходимые для сборки пакеты:
 
 ::
 
@@ -49,19 +49,19 @@ Your package manager might contain Eureka, albeit if outdated you can opt to bui
     zlib1g-dev \
     xdg-utils
 
-* make the binary
+* собираем исполнимый файл
 
 ::
 
     $ cd eureka*
     $ make
 
-* install Eureka
+* устанавливаем Eureka
 
 ::
 
     $ sudo make install
 
-.. note::
+.. На заметку::
 
-    See file INSTALL.txt included with the Eureka source for detailed build instructions.
+    Подробности установки описаны в файле INSTALL.txt.

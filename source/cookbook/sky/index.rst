@@ -1,29 +1,29 @@
-Sky
-===
+Небо
+====
 
 .. image:: capture_001.jpg
 
-Method
-------
+Метод
+-----
 
-Setting the sky is a simple matter of picking the right ceiling texture, `F_SKY1`.
+Создать небо просто - нужно наложить на потолок текстуру `F_SKY1`.
 
 .. image:: capture_001.png
 
 
-However the walls can get in the way of that nice view:
+Да и стены могут помочь создать неплохой вид:
 
 .. image:: capture_002.png
 
-To lower the walls, add a border sector near the edge (highlighted below):
+Для стен пониже, добавляем приграничный сектор с нужной высотой (на карте он подсвечен):
 
 .. image:: capture_003.png
 
-Lower the ceiling of this border sector (:kbd:`[`) so that you can see more of the sky.
+Опускаем потолок приграничного сектора (:kbd:`[`) и наслаждаемся видом широкого неба.
 
 
-Downloads
----------
+Загрузки
+--------
 
 :download:`sky.wad`
 

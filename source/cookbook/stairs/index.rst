@@ -1,38 +1,38 @@
-Stairs
-======
+Лестницы
+========
 
 .. image:: stairs-01.png
 
-Layout
-------
+Схема
+-----
 
 .. image:: stairs-02.png
 
-Method
-------
+Метод
+-----
 
-* In vertex edit mode, use the :kbd:`RMB` to create an outline:
+* В режиме вершин :kbd:`ПКМ` рисуем контур будущей лестницы:
 
 .. image:: stairs-03.png
 
-* Now add vertices for the steps in between:
+* Режем прямоугольник на ступеньки:
 
 .. image:: stairs-04.png
 
-* In sector edit mode, select all the steps. Hold :kbd:`shift` to make the selection without moving the room sector:
+* В режиме секторов выбираем все ступеньки:
 
 .. image:: stairs-05.png
 
-* Press the raise floor shortcut key :kbd:`.` twice
-* Using the :kbd:`LMB`, deselect the first step:
+* Жмём пару раз клавишу поднятия пола :kbd:`.`
+* :kbd:`ЛКМ` снимаем выделение с первой ступени:
 
 .. image:: stairs-06.png
 
-* Repeat raising the floor and deselecting the next step:
+* ПОвторяем предыдущие 2 шага, пока ступеи не закончатся:
 
 .. image:: stairs-07.png
 
-Downloads
+Загрузки
 ---------
 
 :download:`stairs.wad`

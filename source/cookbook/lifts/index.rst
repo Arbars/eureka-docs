@@ -1,39 +1,39 @@
-Lifts
+Лифты
 =====
 
 .. image:: lifts-01.png
 
-Method
+Метод
 ------
 
-* Enter vertex edit mode and create the lift platform. This can be a simple split of a raised sector:
+* Переходим в режим вершин и рисуем платформу лифта. Она должна быть вровень с поднятым сектором:
 
 .. image:: lifts-05.png
 
-* Ensure the linedef on the front of the lift is facing outward. A lift is triggered from the **Front** linedef.
-* If the linedef is facing the wrong way, you can select it and press :kbd:`F1` for the operations menu, and select `Flip`:
+* Убеждаемся, что линии платформы повёрнуты лицевыми сторонами наружу, иначе лифт работать не будет.
+* Если линии стоят не так, как надо, переходим в режим линий, жмём :kbd:`F1` и выбираем в меню пункт `Flip`:
 
 .. image:: lifts-06.png
 
-* Enter linedef edit mode, select the front of the lift
+* Выделяем линию лифта, с которй будет взаимодействовать игрок:
 
 .. image:: lifts-02.png
 
-* Choose the **Type** as `62 SR Lower Lift`
-* Press :kbd:`;` then :kbd:`f` to apply a fresh tag to the linedef
+* Назначаем тип линии `62 SR Lower Lift`
+* Жмём сначала :kbd:`;` а затем :kbd:`f` и назначаем линии новый тэг
 
 .. image:: lifts-03.png
 
-* Enter sector edit mode (:kbd:`s`), select the lift sector
-* Press :kbd:`;` then :kbd:`l` to apply the last tag to the sector
+* Переходим в режим секторов (:kbd:`s`) и выделяем сектор лифта
+* Жмём сначала :kbd:`;` а затем :kbd:`l` и назначаем сектору последний использованный тэг
 
 .. image:: lifts-04.png
 
-.. note::
+.. На заметку::
 
-    The SR line special indicates Switch Repeating, so the lift can be used over and over.
+    Лифты со спэшлами типа SR можно использовать много раз, а с S1 - только 1 раз.
 
-Downloads
----------
+Загрузки
+--------
 
 :download:`lifts.wad`

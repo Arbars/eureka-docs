@@ -1,149 +1,150 @@
-Mapping Concepts
-================
+Базовые понятия
+===============
 
-.. note::
+.. На заметку::
 
-    LMB: left mouse button click, RMB: right mouse button click
+    ЛКМ: клик Левой Кнопкой Мыши, ПКМ: клик Правой Кнопкой Мыши
 
-Vertices
+Вершины
 --------
 
-Vertices are the joins between Lines, and the corners between walls.
+Вершины соединяют линии сектора между собой.
 
-* Press :kbd:`v` in the 2D view to enter Vertices edit mode
-* :kbd:`LMB` while hovering over a Linedef inserts a single vertex at the cursor position
-* :kbd:`RMB` inserts a vertex in **line drawing** mode, keep adding vertices with :kbd:`RMB` until you close the polygon
+* Жмём :kbd:`v` в 2D виде для перехода в режим работы с вершинами
+* :kbd:`ЛКМ` на линии вставляет вершину
+* :kbd:`ПКМ` ставит вершину и включает режим **рисования линий**, в котором, продолжив жать :kbd:`ПКМ` и замкнув контур, мы получим сектор
 
 .. image:: vertices.png
 
-Linedefs
+Линии
 --------
 
-Linedefs divide the map into sectors, and they are also used to trigger actions.
+Линии делят карту на сектора. Также они используются для укзания различных экшонов.
 
-Press :kbd:`l` in the 2D view to enter Linedef edit mode.
+Жмём :kbd:`l` в 2D виде, чтобы попасть в режим работы с линиями.
 
 .. image:: linedefs.png
 
-A linedef also has a front and a back. You can tell the front of a Linedef by the direction of the protruding pin in the middle of the Linedef.
+Также линия имеет лицевую и обратную стороны. Определить лицевую сторону линии можно по короткой перепендикулярной линии, выступающей из середины.
 
 .. image:: linedef-front.png
 
-*this linedef front is facing down*
+*линия повернута лиевой стороной вниз*
 
 
-Sectors
+Сектора
 -------
 
-A sector is an area defined by multiple Linedefs.
+Сектор - участок карты, очерченный несколькими линиями.
 
-Press :kbd:`s` in the 2D view to enter Sector edit mode.
+Жмём :kbd:`s` в 2D виде для перехода в режим работы с секторами.
 
 .. image:: sectors.png
 
-Things
-------
+Объекты
+-------
 
-Things represent players, monsters, pick-ups, obstacles, decorations, player start positions and teleport landing sites.
+Объект нужен для обозначения игрока, монстра, предметов дектораций, бонусов, точек старта в мультиплеере и точек телепорта.
 
-Press :kbd:`t` in the 2D view to enter Things edit mode. :kbd:`space` or :kbd:`ins` inserts a new thing at the cursor position.
+Жмём :kbd:`t` в 2D виде для перехода в режим работы с объектами. :kbd:`space` или :kbd:`ins` вставляют новый объект туда, куда указывает курсор.
 
 .. image:: things.png
 
-Multiple selections
--------------------
+Мульти-выбор 
+-------------
 
-While in the 2D view, you can select Vertices, Linedefs, Sectors and Things by:
+При необходимости, перейдя в 2D вид, можно выделять вершины, линии, сектора и объекты при помощи:
 
-* Clicking an item to select/deselect it
-* Drag-select multiple items to include/exclude them in the selection
+* Клика по ним (при повторном клике по объекту выделение снимается)
+* Выделения объектов рамкой, котрая появляется при зажатии ЛКМ
 * Hold :kbd:`shift` to prevent moving things around when making a selection
 
-Switching between Vertices, Linedefs and Sectors will preserve any selections as much as possible.
+Переключениемежду режимими работы с вершинами, линиями и секторами сохраняют выделение, если это возможно.
 
-Deselecting
------------
+Отмена выделения
+----------------
 
-Press :kbd:`\`` (back quote) in the 2D view to deselect everything.
+Жмём :kbd:`\`` (обратная косая черта) в 2D виде, и выделение со всех объектов снимается.
 
 
-Transformations
----------------
+Трансформация
+-------------
 
-You can scale and rotate selected Sectors, Linedefs and Vertices.
+У секторов, линий и вершин имеется возможность менять форму и размер.
 
-Scaling
-^^^^^^^
+Изменение размера
+^^^^^^^^^^^^^^^^^
 
-Click on :kbd:`Edit -> Scale Objects` or press :kbd:`F3` to show the scale dialog.
+Менять размер объекта можно через меню :kbd:`Edit -> Scale Objects`, или через клавишу :kbd:`F3`, которая вызовет диалоговое окно.
 
 .. image:: scale-selection.png
 
-*Four inner most vertices are selected*
+*Выбраны 4 основных вершины*
 
 .. image:: scale-dialog.png
 
-*Scaling the vertices by 50% on the x-axis*
+*Смещение вершин на 50% по оси X*
 
 .. image:: scale-result.png
 
-Rotating
+Вращение
 ^^^^^^^^
 
-Click on :kbd:`Edit -> Rotate Object` or press :kbd:`F4` to show the rotate dialog.
+ПО пункту меню :kbd:`Edit -> Rotate Object` или  нажатию :kbd:`F4` появится диалоговое окно вращения.
 
 .. image:: scale-selection.png
 
-*Four inner most vertices are selected*
+*Выбраны 4 основных вершины*
 
 .. image:: rotate-dialog.png
 
-*Rotating the vertices by 45 degrees*
+*Вершины повёрнуты на 45 градусов*
 
 .. image:: rotate-result.png
 
 
-Textures
+Текстуры
 --------
 
-Sidedefs
-^^^^^^^^
+Стороны
+^^^^^^^
 
-A Sidedef refers to the texture data for a Linedef, it can have **lower**, **middle** and **upper** textures.
+Стороны содержат в себе данные о расположении текстур линии, которые могут быть **нижними**, **средними** и **верхними**.
 
-The relation of the sidedefs are best illustrated with these poorly-matched textures:
+Связь разных уровней стороны прекрасно илюстрируется отвратительным выбором текстур:
 
 .. image:: textures-sidedefs-3d.png
 
-*Lower texture is COMPBLUE, middle is MIDGRATE, and upper texture is BRICK10*
+*Нижний уровень - COMPBLUE, средний - MIDGRATE, верхний - BRICK10*
 
 
-**To change the sidedefs**
+**Смена текстур на стенах**
 
-* Switch to 2D mode
-* Enter Linedef mode (:kbd:`l`)
-* Select one (or more) linedefs
+* Переходим в 2D вид
+* Включаем режим работы с линиями (:kbd:`l`)
+* Выделяем одну или несколько линий
 
 .. image:: textures-selection.png
 
-* Click the "Front sidedef" texture button to open the texture browser
-* (optionally) Press :kbd:`tab` to switch to 3D view for a live preview
-* Select a texture in the browser window
+* Кликаем по кнопке текстуры "Front sidedef".Откроется браузер текстур.
+* (опционально) Жмём :kbd:`tab` и преезходим в 3D вид для просмотра изменений "вживую"
+* Выбираем текстуру в окне браузера
 
 .. image:: textures-browser.png
 
-Floor / ceiling textures
-^^^^^^^^^^^^^^^^^^^^^^^^
+Текстуры пола и потолка
+^^^^^^^^^^^^^^^^^^^^^^^
 
-Enter Sector editing mode and select the sector to change:
+Переходим в режим работы с секторами и выбираем нужный сектор:
 
 .. image:: floor-ceil-texture-2d.png
 
-Click the texture buttons to open the texture browser:
+Кликаем по кнопке текстуры. Откроется браузер:
 
 .. image:: floor-ceil-buttons-closeup.png
 
-You can enter the 3D view to see a preview of the texture changes:
+Жмём :kbd:`tab` и преезходим в 3D вид для просмотра изменений "вживую":
 
 .. image:: floor-ceil-browser.png
 
+Выбираем текстуру в окне браузера
