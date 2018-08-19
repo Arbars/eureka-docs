@@ -20,8 +20,9 @@
 # -- Project information -----------------------------------------------------
 
 project = u'Eureka'
-copyright = u'2018, Eureka Doom Editor'
+copyright = u'2018, Редактор карт Doom Eureka'
 author = u'Wesley Werner'
+author = u'Перевод - Arbars Zagadkin'
 
 # The short X.Y version
 version = u'1.21'

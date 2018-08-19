@@ -17,9 +17,9 @@ Eureka - редактор карт классического DOOM и основ
 
 Хочешь помочь с улучшением проекта? `Сделай форк репозитория автора оригинала <https://github.com/wesleywerner/eureka-docs>`_, или `перевода <https://github.com/Arbars/eureka-docs>`_ и отправь pull request.
 
-Также есть `PDF-версия данного мануала <http://readthedocs.org/projects/eureka/downloads/>`_.
+Также есть `PDF-версия данного мануала <https://readthedocs.org/projects/eureka-docs/downloads/>`_.
 
 Лицензия
 ^^^^^^^^
 
-Данный мануал распространяется под лицензии `Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0/>`_.
+Данный мануал распространяется под лицензией `Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0/>`_.
